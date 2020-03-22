@@ -1,0 +1,22 @@
+{
+  "name": "movie-randomizer",
+  "version": "1.0.0",
+  "description": "Practice React Project to select a movie to watch at random from a list of movies curated by the family",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choneyse/movie-randomizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/choneyse/movie-randomizer/issues"
+  },
+  "homepage": "https://github.com/choneyse/movie-randomizer#readme",
+  "dependencies": {
+    "create-react-app": "^3.4.1"
+  }
+}
