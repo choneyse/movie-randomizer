@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  vertical-align: middle;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +43,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.movie {
+  display: inline-block;
+  /* width: auto; */
+  border: 1px solid blue;
+  /* margin: 10px; */
+  border-radius: 10px;
+  padding: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: middle; */
+}
+
+.movie .content {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+.movie.active {
+  background-color: yellow;
 }

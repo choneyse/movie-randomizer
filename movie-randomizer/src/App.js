@@ -7,16 +7,25 @@ function App() {
   const randomNumber = () => {
     return Math.floor(Math.random() * (movies.length  - 0));
   }
+
+  const isCurrentIndex = () => {
+    return movieIndex === movies.indexOf(movieIndex);
+  }
+
   const [movieIndex, setMovieIndex] = useState(randomNumber())
 
-  const buttonClick = () => {
-    console.log()
+  const updateMovieIndex = () => {
+    setMovieIndex(randomNumber)
   }
 
   return (
     <div className="App">
-      <Movie movies={movies[movieIndex]} />
-      <button onClick={() => setMovieIndex(randomNumber)}>Randomize</button>
+      <div className="movie-grid">
+        {movies.map((movie, index) =>
+          <Movie movie={movie} key={index} isActive={index === movieIndex} />
+        )}
+      </div>
+      <button onClick={updateMovieIndex}>Randomize</button>
     </div>
   );
 }

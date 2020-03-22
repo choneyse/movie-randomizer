@@ -1,11 +1,14 @@
 import React from 'react';
 
 function Movie(props) {
-    const movies = props.movies;
+    const movie = props.movie;
+    const isActive = props.isActive;
     return (
-      <div className="movie">
-          <h1>{movies.title}</h1>
-          <h2>{movies.service}</h2>
+      <div className={`movie ${isActive ? 'active' : ''}`}>
+        <div className='content'>
+            <p><b>{movie.title}</b><br />
+            {movie.service}</p>
+        </div>
       </div>
     );
   }
